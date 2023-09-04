@@ -22,10 +22,10 @@ class ButterflyPatternUsingLoop{
                 System.out.print("*");
             }
             for(int l=1;l<k;l++){
-                System.out.print("-");
+                System.out.print(" ");
             }
             for(int l=1;l<k;l++){
-                System.out.print("-");
+                System.out.print(" ");
             }
             for(int l=k;l<=n;l++){
                 System.out.print("*");
