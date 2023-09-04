@@ -24,12 +24,12 @@ class ButterflyPatternUsingLoop{
             for(int l=1;l<k;l++){
                 System.out.print("-");
             }
-            // for(int l=n-1;l>k;l--){
-            //     System.out.print("-");
-            // }
-            // for(int l=n-1;l>k;l--){
-            //     System.out.print("*");
-            // }
+            for(int l=1;l<k;l++){
+                System.out.print("-");
+            }
+            for(int l=k;l<=n;l++){
+                System.out.print("*");
+            }
             System.out.println();
         }
     }
