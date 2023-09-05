@@ -18,9 +18,6 @@ class CopyConstructor1{
         System.out.println(this.name+" "+this.dpt);
     }
 
-    // constructor using chain link
-    CopyConstructor1()
-
     CopyConstructor1(){
         System.out.println("Simple constructor");
     }
