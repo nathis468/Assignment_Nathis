@@ -1,30 +1,34 @@
-// Nested Interface
+Nested Interface
 
-// interface Shape{
-//     interface Rectangle{
-//         void RectanglePrint();
-//     }
-//     interface Circle{
-//         void CirclePrint();
-//     }
-// }
+interface Shape{
+    interface Rectangle{
+        void RectanglePrint();
+        interface Circle{
+            void CirclePrint();
+        }
+    }
+}
 
-// class Implementation implements Shape{
-//     public void RectanglePrint(){
-//         System.out.println("In Rectangle it requires length and breadth");
-//     }
-//     public void CirclePrint(){
-//         System.out.println("In Circle it requires radius");
-//     }
-// }
+class Implementation implements Shape.Rectangle{
+    public void RectanglePrint(){
+        System.out.println("In Rectangle it requires length and breadth");
+    }
+}
 
-// public class NestedInterface {
-//     public static void main(String args[]){
-//         Implementation imp=new Implementation();
-//         imp.RectanglePrint();
-//         imp.CirclePrint();
-//     }
-// }
+class Implementation2 implements Shape.Rectangle.Circle{
+    public void CirclePrint(){
+        System.out.println("In Circle it requires radius");
+    }
+}
+
+public class NestedInterface {
+    public static void main(String args[]){
+        Implementation imp=new Implementation();
+        imp.RectanglePrint();
+        Implementation2 imp2=new Implementation2();
+        imp2.CirclePrint();
+    }
+}
 
 
 
@@ -63,26 +67,26 @@
 
 // class inside the interface
 
-interface ParentInterface{
-    void InDoorGames();
-    class Sports{
-        void Cricket(){
-            System.out.println("Inside Cricket method");
-        }
-    }
-}
+// interface ParentInterface{
+//     void InDoorGames();
+//     class Sports{
+//         void Cricket(){
+//             System.out.println("Inside Cricket method");
+//         }
+//     }
+// }
 
-class Implementation implements ParentInterface{
-    public void InDoorGames(){
-        System.out.println("Inside InDoorGames method");
-    }
-}
+// class Implementation implements ParentInterface{
+//     public void InDoorGames(){
+//         System.out.println("Inside InDoorGames method");
+//     }
+// }
 
-class NestedInterface{
-    public static void main(String args[]){
-        ParentInterface pi=new Implementation();
-        pi.InDoorGames();
-        ParentInterface.Sports pis=new ParentInterface.Sports();
-        pis.Cricket();
-    }
-}
+// class NestedInterface{
+//     public static void main(String args[]){
+//         ParentInterface pi=new Implementation();
+//         pi.InDoorGames();
+//         ParentInterface.Sports pis=new ParentInterface.Sports();
+//         pis.Cricket();
+//     }
+// }
