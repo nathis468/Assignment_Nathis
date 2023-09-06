@@ -1,4 +1,4 @@
-Nested Interface
+// Nested Interface
 
 interface Shape{
     interface Rectangle{
